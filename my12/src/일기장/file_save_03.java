@@ -1,0 +1,25 @@
+package 일기장;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
+import javax.swing.JOptionPane;
+
+public class file_save_03 {
+
+	public static void main(String[] args) throws Exception {
+		
+		//파일을 인식 + 파일에 저장
+		
+		String name = JOptionPane.showInputDialog("이름 입력 >> ");
+		String company = JOptionPane.showInputDialog("소속 입력 >> ");
+		String day = JOptionPane.showInputDialog("날짜 입력 >> ");
+		
+		FileWriter f = new FileWriter(day + ".txt");
+		f.write(name + "\n");
+		f.write(company + "\n");
+		f.close();
+	 }
+
+}
